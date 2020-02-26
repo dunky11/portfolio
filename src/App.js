@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import "./App.css";
+import IntroSection from "./IntroSection";
+import PaperPlaneAnimation from "./PaperPlaneAnimation";
+import Content from "./Content";
 
 function App() {
+  /**
+   * Always scroll to top of page on page reload
+   */
+  window.onbeforeunload = function() {
+    window.scrollTo(0, 0);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Content></Content>
+      <IntroSection></IntroSection>
+      <PaperPlaneAnimation></PaperPlaneAnimation>
+    </Fragment>
   );
 }
 

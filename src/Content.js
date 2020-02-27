@@ -12,7 +12,7 @@ function Content() {
           left: 0,
           width: "100%",
           paddingLeft: "var(--spacing-3)",
-          paddingRight: "var(--spacing-3)"
+          paddingRight: "calc(16px + var(--spacing-5))"
         }}
       >
         <div

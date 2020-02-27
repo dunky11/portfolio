@@ -33,7 +33,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-family: "Montserrat";
-  font-size: 100%;
+  font-size: 1em;
+  position: relative;
+  background-image: linear-gradient(to right, #ff6666 0%, #f5576c 100%);
 }
 /* background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
   background-image: linear-gradient(to right, #a6c0fe 0%, #f68084 100%);
@@ -41,7 +43,6 @@ html {
 */
 body {
   overflow-x: hidden;
-  background-image: linear-gradient(to right, #ff6666 0%, #f5576c 100%);
 }
 
 h1 {
@@ -149,7 +150,8 @@ h3.paragraph {
   width: 100%;
   height: 100%;
   padding-left: var(--spacing-3);
-  padding-right: var(--spacing-3);
+  /* 16px is width of scollbar */
+  padding-right: calc(16px + var(--spacing-5));
 }
 
 .content-wrapper-inner {

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import reactSaasTemplateIMG from "./reactsaastemplate.png";
+import reactSaasTemplateIMG from "./reactsaastemplate.jpg";
 
 const _projects = [
   {

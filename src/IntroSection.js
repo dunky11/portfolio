@@ -33,6 +33,7 @@ class IntroSection extends PureComponent {
     });
     tween.then(() => {
       document.body.style.overflowY = "auto";
+      document.documentElement.style.width = "calc(100% + 16px)";
     });
     tween.to(".paper-margin", 1, { marginTop: "90vh" });
     this.startScrollAnimation();
@@ -45,8 +46,6 @@ class IntroSection extends PureComponent {
       scaleX: "2",
       translateX: "75%",
       rotate: "45deg"
-    }).then(() => {
-      document.body.style.overflowY = "auto";
     });
 
     const controller = new ScrollMagic.Controller();

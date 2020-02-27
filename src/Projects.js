@@ -5,6 +5,7 @@ const _projects = [
   {
     name: "React Saas Template",
     github: "https://github.com/dunky11/react-saas-template",
+    homepage: "https://reactsaastemplate.com",
     img: reactSaasTemplateIMG,
     decription:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
@@ -12,6 +13,7 @@ const _projects = [
   {
     name: "Centralia Coin",
     github: "https://github.com/dunky11/centralia-coin",
+    homepage: "https://dunky11.github.io/centralia-coin",
     img: reactSaasTemplateIMG,
     decription:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
@@ -31,21 +33,20 @@ function Projects() {
             className="paragraph"
           >
             {project.name}
-            <i
-              className="fab fa-github-square skill-social-link-icon"
-              style={{ marginLeft: "var(--spacing-2)" }}
-            ></i>
+            <a href={project.github} target="_blank" rel="noopener">
+              <i
+                className="fab fa-github-square skill-social-link-icon"
+                style={{ marginLeft: "var(--spacing-2)" }}
+              ></i>
+            </a>
           </h6>
           <p className="md-mg-bottom">{project.decription}</p>
-          <img
-            src={project.img}
-            style={{
-              width: "100%",
-              height: "auto",
-              border: "3px solid",
-              filter: "brightness(0.9)"
-            }}
-          ></img>
+          <div style={{ position: "relative" }}>
+            <img src={project.img} className="projectImg"></img>
+            <a href={project.homepage} target="_blank" rel="noopener">
+              <div className="darken-image"></div>
+            </a>
+          </div>
         </div>
       ))}
     </Fragment>

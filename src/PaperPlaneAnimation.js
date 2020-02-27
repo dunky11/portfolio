@@ -48,9 +48,14 @@ class PaperPlaneAnimation extends PureComponent {
   };
   render() {
     return (
-      <section className="overflow-hidden">
+      <section
+        className="overflow-hidden"
+        style={{ position: "absolute", top: 0, left: 0, zIndex: -10 }}
+      >
         <div className="animation-paper-plane">
-          <img src={paperPlane} className="paper-plane"></img>
+          <div src={paperPlane} className="paper-plane">
+            <img src={paperPlane} style={{ height: 100 }}></img>
+          </div>
         </div>
       </section>
     );

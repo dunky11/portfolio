@@ -222,15 +222,9 @@ const skills = [
 
 function Skills() {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        margin: "var(--spacing-1-negative)"
-      }}
-    >
+    <div className="container-1">
       {skills.map((skill, index) => (
-        <div style={{ padding: "var(--spacing-1)" }} key={index}>
+        <div className="item" key={index}>
           <SkillChip
             name={skill.name}
             icon={skill.icon}

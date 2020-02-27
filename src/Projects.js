@@ -42,7 +42,11 @@ function Projects() {
           </h6>
           <p className="md-mg-bottom">{project.decription}</p>
           <div style={{ position: "relative" }}>
-            <img src={project.img} alt="project" className="projectImg"></img>
+            <img
+              src={project.img}
+              alt="project"
+              className="projectImg lazyload"
+            ></img>
             <a
               href={project.homepage}
               target="_blank"

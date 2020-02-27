@@ -52,43 +52,23 @@ class PaperPlaneAnimation extends PureComponent {
       // Make animation overlap screen until it's finished
       .setPin(".animation-paper-plane")
       .addTo(controller);
-
-    window.addEventListener("scroll", () => {
-      const offset = this.offset(this.animatedElement);
-      this.followElement.style.top = `${offset.top}px`;
-      this.followElement.style.left = `${offset.left}px`;
-      this.followElement.style.transform = this.animatedElement.parentElement.style.transform;
-    });
   };
   render() {
     return (
-      <div>
-        <img
-          src={paperPlane}
-          style={{ height: 100, position: "absolute" }}
-          alt=""
-          ref={node => {
-            this.followElement = node;
-          }}
-        ></img>
-        <section
-          className="overflow-hidden"
-          style={{ position: "absolute", top: 0, left: 0, zIndex: -10 }}
-        >
-          <div className="animation-paper-plane">
-            <div src={paperPlane} className="paper-plane">
-              <img
-                src={paperPlane}
-                style={{ height: 100, opacity: 0 }}
-                alt=""
-                ref={node => {
-                  this.animatedElement = node;
-                }}
-              ></img>
-            </div>
+      <section className="overflow-hidden animation-paper-plane-wrapper">
+        <div className="animation-paper-plane">
+          <div src={paperPlane} className="paper-plane">
+            <img
+              src={paperPlane}
+              className="lazyload"
+              alt=""
+              ref={node => {
+                this.animatedElement = node;
+              }}
+            ></img>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     );
   }
 }

@@ -3,6 +3,7 @@ import "./App.css";
 import IntroSection from "./IntroSection";
 import PaperPlaneAnimation from "./PaperPlaneAnimation";
 import Content from "./Content";
+import "lazysizes";
 
 class App extends PureComponent {
   componentDidMount() {

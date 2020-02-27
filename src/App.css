@@ -102,6 +102,13 @@ h3.paragraph {
   margin-bottom: var(--spacing-8);
 }
 
+.animation-paper-plane-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none !important;
+}
+
 .animation-paper-plane {
   overflow-x: hidden;
   height: 100vh;
@@ -114,6 +121,11 @@ h3.paragraph {
   position: absolute;
   top: 50%;
   left: -200px;
+}
+
+.paper-plane img {
+  height: 100px;
+  width: auto;
 }
 
 .intro-animation {
@@ -204,4 +216,18 @@ h3.paragraph {
 
 .darken-image:hover {
   opacity: 0;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.container-1 {
+  display: flex;
+  margin: var(--spacing-1-negative);
+  flex-wrap: wrap;
+}
+
+.container-1 .item {
+  padding: var(--spacing-1);
 }

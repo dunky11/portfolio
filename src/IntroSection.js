@@ -34,7 +34,7 @@ class IntroSection extends PureComponent {
     tween.then(() => {
       document.body.style.overflowY = "auto";
     });
-    // tween.to(".paper-margin", 1, { marginTop: "90vh" });
+    tween.to(".paper-margin", 1, { marginTop: "90vh" });
     this.startScrollAnimation();
   };
 

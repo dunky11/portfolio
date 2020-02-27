@@ -33,7 +33,7 @@ function Projects() {
             className="paragraph"
           >
             {project.name}
-            <a href={project.github} target="_blank" rel="noopener">
+            <a href={project.github} target="_blank" rel="noopener noreferrer">
               <i
                 className="fab fa-github-square skill-social-link-icon"
                 style={{ marginLeft: "var(--spacing-2)" }}
@@ -42,8 +42,12 @@ function Projects() {
           </h6>
           <p className="md-mg-bottom">{project.decription}</p>
           <div style={{ position: "relative" }}>
-            <img src={project.img} className="projectImg"></img>
-            <a href={project.homepage} target="_blank" rel="noopener">
+            <img src={project.img} alt="project" className="projectImg"></img>
+            <a
+              href={project.homepage}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="darken-image"></div>
             </a>
           </div>

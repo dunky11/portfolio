@@ -13,6 +13,14 @@ class PaperPlaneAnimation extends PureComponent {
   componentDidMount() {
     this.startAnimation();
   }
+
+  offset = el => {
+    var rect = el.getBoundingClientRect(),
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+  };
+
   startAnimation = () => {
     const tween = gsap.timeline();
     tween.to(".animation-paper-plane .paper-plane", 5, {
@@ -43,21 +51,44 @@ class PaperPlaneAnimation extends PureComponent {
       .setTween(tween)
       // Make animation overlap screen until it's finished
       .setPin(".animation-paper-plane")
-      .addIndicators()
       .addTo(controller);
+
+    window.addEventListener("scroll", () => {
+      const offset = this.offset(this.animatedElement);
+      this.followElement.style.top = `${offset.top}px`;
+      this.followElement.style.left = `${offset.left}px`;
+      this.followElement.style.transform = this.animatedElement.parentElement.style.transform;
+    });
   };
   render() {
     return (
-      <section
-        className="overflow-hidden"
-        style={{ position: "absolute", top: 0, left: 0, zIndex: -10 }}
-      >
-        <div className="animation-paper-plane">
-          <div src={paperPlane} className="paper-plane">
-            <img src={paperPlane} style={{ height: 100 }}></img>
+      <div>
+        <img
+          src={paperPlane}
+          style={{ height: 100, position: "absolute" }}
+          alt=""
+          ref={node => {
+            this.followElement = node;
+          }}
+        ></img>
+        <section
+          className="overflow-hidden"
+          style={{ position: "absolute", top: 0, left: 0, zIndex: -10 }}
+        >
+          <div className="animation-paper-plane">
+            <div src={paperPlane} className="paper-plane">
+              <img
+                src={paperPlane}
+                style={{ height: 100, opacity: 0 }}
+                alt=""
+                ref={node => {
+                  this.animatedElement = node;
+                }}
+              ></img>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     );
   }
 }

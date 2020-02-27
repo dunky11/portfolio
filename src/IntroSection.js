@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { PureComponent } from "react";
 import { gsap, Power1, CSSPlugin, MotionPathPlugin } from "gsap/all";
 import * as ScrollMagic from "scrollmagic";
@@ -31,17 +31,22 @@ class IntroSection extends PureComponent {
         width: "90%"
       });
     });
-    // tween.to(".content-wrapper-inner", 1, { marginTop: "90vh" });
+    tween.then(() => {
+      document.body.style.overflowY = "auto";
+    });
+    // tween.to(".paper-margin", 1, { marginTop: "90vh" });
     this.startScrollAnimation();
   };
 
   startScrollAnimation() {
-    const tween = gsap.timeline();
-    tween.to(document.querySelector(".intro-animation"), 5, {
+    const tl = gsap.timeline();
+    tl.to(document.querySelector(".intro-animation"), 5, {
       scaleY: "2",
       scaleX: "2",
       translateX: "75%",
       rotate: "45deg"
+    }).then(() => {
+      document.body.style.overflowY = "auto";
     });
 
     const controller = new ScrollMagic.Controller();
@@ -50,9 +55,8 @@ class IntroSection extends PureComponent {
       // Trigger animation at the top of the script
       triggerHook: 0
     })
-      .setTween(tween)
+      .setTween(tl)
       // Make animation overlap screen until it's finished
-      .addIndicators()
       .addTo(controller);
   }
 

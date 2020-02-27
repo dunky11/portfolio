@@ -145,6 +145,9 @@ h3.paragraph {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.paper-margin {
   margin-top: 105vh;
 }
 

@@ -3,6 +3,7 @@ import { gsap, Power1, CSSPlugin, MotionPathPlugin } from "gsap/all";
 import paperPlane from "./paperPlane.png";
 import * as ScrollMagic from "scrollmagic";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
+import flyPathSVG from "./flyPath.svg";
 
 gsap.registerPlugin(Power1);
 gsap.registerPlugin(CSSPlugin);
@@ -27,20 +28,16 @@ class PaperPlaneAnimation extends PureComponent {
       ease: Power1.easeIn,
       motionPath: {
         path: [
-          { x: -200, y: -20 },
-          { x: 300, y: 10 },
-          { x: 500, y: 100 },
-          { x: 750, y: -100 },
-          { x: 350, y: -50 },
-          { x: 600, y: 100 },
-          { x: 800, y: 0 },
-          { x: 1400, y: 25 },
-          { x: 2400, y: -150 }
+          { x: -200, y: 20 },
+          { x: 500, y: 30 },
+          { x: 800, y: 10 },
+          { x: 1400, y: 40 }
         ],
-        curviness: 1.25,
+        curviness: 4,
         autoRotate: true
       }
     });
+    console.log(document.getElementById("#hgRWFimBx"));
     const controller = new ScrollMagic.Controller();
     new ScrollMagic.Scene({
       triggerElement: ".animation-paper-plane",

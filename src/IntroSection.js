@@ -40,7 +40,7 @@ class IntroSection extends PureComponent {
         top: 0,
         ease: Power4.easeOut
       },
-      "-=0.75"
+      "-=0.5"
     );
     tween.to("#intro-text-3", 1.5, {
       opacity: 1,

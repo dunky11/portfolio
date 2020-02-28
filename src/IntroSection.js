@@ -33,19 +33,24 @@ class IntroSection extends PureComponent {
       top: 0,
       ease: Power4.easeOut
     });
-    tween.to("#intro-text-2 span", 1.5, {
-      top: 0,
-      ease: Power4.easeOut
-    });
+    tween.to(
+      "#intro-text-2 span",
+      1.5,
+      {
+        top: 0,
+        ease: Power4.easeOut
+      },
+      "-=0.75"
+    );
     tween.to("#intro-text-3", 1.5, {
       opacity: 1,
       ease: Power4.easeOut
     });
+    tween.to(".paper-margin", 1, { marginTop: "90vh" }, "-=0.5");
     tween.then(() => {
       document.body.style.overflowY = "auto";
       document.documentElement.style.width = "calc(100% + 16px)";
     });
-    tween.to(".paper-margin", 1, { marginTop: "90vh" });
     this.startScrollAnimation();
   };
 

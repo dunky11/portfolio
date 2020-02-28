@@ -16,6 +16,7 @@
   --spacing-12: 96px;
   --spacing-13: 104px;
   --spacing-14: 112px;
+  --white: #f7fcfe;
   --link: #f5576c;
   --link-transition: color 200ms cubic-bezier(0.4, 0, 1, 1);
 }

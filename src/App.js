@@ -1,9 +1,10 @@
 import React, { Fragment, PureComponent } from "react";
 import "./css/app.css";
+import "lazysizes";
 import BlockAnimation from "./components/BlockAnimation";
 import PaperPlaneAnimation from "./components/PaperPlaneAnimation";
 import Content from "./components/Content";
-import "lazysizes";
+import isMobile from "./functions/isMobile";
 
 class App extends PureComponent {
   componentDidMount() {
@@ -14,6 +15,12 @@ class App extends PureComponent {
       window.scrollTo(0, 0);
     };
     document.body.style.overflowY = "hidden";
+    if (isMobile()) {
+      document.querySelector(".content-wrapper").style.paddingRight =
+        "var(--spacing-3)";
+      document.querySelector(".intro-text").style.paddingRight =
+        "var(--spacing-3)";
+    }
   }
 
   render() {

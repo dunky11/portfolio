@@ -2,6 +2,7 @@ import React, { Fragment, PureComponent } from "react";
 import "../css/content.css";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import isMobile from "../functions/isMobile";
 import { gsap, Power4 } from "gsap/all";
 
 const socialLinks = [
@@ -40,7 +41,13 @@ class Content extends PureComponent {
     tl.to(this.paperMargin, 1, { marginTop: "90vh" }, "-=0.5");
     tl.then(() => {
       document.body.style.overflowY = "auto";
-      document.documentElement.style.width = "calc(100% + 16px)";
+      /**
+       * Scrollbar on mobile is transparent, so we wont' append the padding
+       * fix here
+       */
+      if (!isMobile()) {
+        document.documentElement.style.width = "calc(100% + 16px)";
+      }
     });
   };
 
@@ -67,9 +74,8 @@ class Content extends PureComponent {
                 I'm Tim.
               </span>
             </h1>
-            <h5>
+            <h5 className="intro-text-sub">
               <span
-                className="intro-text-sub"
                 ref={node => {
                   this.introTextThree = node;
                 }}

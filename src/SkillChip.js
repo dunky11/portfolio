@@ -15,7 +15,7 @@ function SkillChip(props) {
         backgroundColor: color ? color : null
       }}
     >
-      <span style={{ marginRight: "var(--spacing-1)" }}>{name}</span>
+      <p style={{ marginRight: "var(--spacing-1)" }}>{name}</p>
       {icon}
     </div>
   );

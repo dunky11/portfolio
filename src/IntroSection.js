@@ -1,12 +1,10 @@
 import React from "react";
 import { PureComponent } from "react";
-import { gsap, Power1, CSSPlugin, MotionPathPlugin } from "gsap/all";
+import { gsap, Power1, CSSPlugin, MotionPathPlugin, Power4 } from "gsap/all";
 import * as ScrollMagic from "scrollmagic";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 
-gsap.registerPlugin(Power1);
-gsap.registerPlugin(CSSPlugin);
-gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(Power1, Power4, CSSPlugin, MotionPathPlugin);
 ScrollMagicPluginGsap(ScrollMagic, gsap);
 
 class IntroSection extends PureComponent {
@@ -30,6 +28,18 @@ class IntroSection extends PureComponent {
       tween.to(block, 0.2, {
         width: "90%"
       });
+    });
+    tween.to("#intro-text-1 span", 1.5, {
+      top: 0,
+      ease: Power4.easeOut
+    });
+    tween.to("#intro-text-2 span", 1.5, {
+      top: 0,
+      ease: Power4.easeOut
+    });
+    tween.to("#intro-text-3", 1.5, {
+      opacity: 1,
+      ease: Power4.easeOut
     });
     tween.then(() => {
       document.body.style.overflowY = "auto";

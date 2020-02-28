@@ -69,7 +69,6 @@ h6 {
   font-size: 1.6rem;
 }
 
-span,
 p {
   font-size: 1.4rem;
 }
@@ -213,7 +212,7 @@ h3.paragraph {
   cursor: pointer;
   background: black;
   opacity: 0.1;
-  transition: 200ms cubic-bezier(0.4, 0, 1, 1);
+  transition: opacity 200ms cubic-bezier(0.4, 0, 1, 1);
 }
 
 .darken-image:hover {
@@ -232,4 +231,15 @@ h3.paragraph {
 
 .container-1 .item {
   padding: var(--spacing-1);
+}
+
+h1.hide-text {
+  overflow: hidden;
+  position: relative;
+  height: 5.2rem;
+}
+
+.hide-text span {
+  position: absolute;
+  top: 5.2rem;
 }

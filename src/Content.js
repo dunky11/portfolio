@@ -16,15 +16,33 @@ function Content() {
         }}
       >
         <div
-          style={{ maxWidth: 1000, marginLeft: "auto", marginRight: "auto" }}
+          style={{
+            maxWidth: 1000,
+            marginLeft: "auto",
+            marginRight: "auto",
+            position: "relative"
+          }}
         >
-          <h1>
-            Hi,
-            <br />
-            I'm Tim,
-            <br />
-            <h5>Full Stack Web Developer</h5>
+          <h1
+            style={{ marginBottom: "var(--spacing-1)" }}
+            className="hide-text"
+            id="intro-text-1"
+          >
+            <span>Hi,</span>
           </h1>
+          <h1
+            style={{ marginBottom: 0 }}
+            className="hide-text"
+            id="intro-text-2"
+          >
+            <span>I'm Tim.</span>
+          </h1>
+          <span
+            style={{ fontSize: "1.8rem", opacity: 0, marginLeft: "4px" }}
+            id="intro-text-3"
+          >
+            Full Stack Web Developer
+          </span>
         </div>
       </div>
       <div className="content-wrapper">

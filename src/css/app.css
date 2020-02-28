@@ -32,14 +32,61 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-family: "Montserrat";
-  font-size: 1em;
   position: relative;
+  font-size: 100%;
   background-image: linear-gradient(to right, #ff6666 0%, #f5576c 100%);
 }
-/* background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  background-image: linear-gradient(to right, #a6c0fe 0%, #f68084 100%);
-  linear-gradient(to right, #ff6666 0%, #f5576c 100%);
-*/
+
+@media (max-width: 700px) {
+  html {
+    font-size: 92.5%;
+  }
+  :root {
+    --spacing-1-negative: -7px;
+    --spacing-2-negative: -14px;
+    --spacing-3-negative: -21px;
+    --spacing-1: 7px;
+    --spacing-2: 14px;
+    --spacing-3: 21px;
+    --spacing-4: 28px;
+    --spacing-5: 35px;
+    --spacing-6: 42px;
+    --spacing-7: 49px;
+    --spacing-8: 56px;
+    --spacing-9: 63px;
+    --spacing-10: 70px;
+    --spacing-11: 77px;
+    --spacing-12: 84px;
+    --spacing-13: 91px;
+    --spacing-14: 98px;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 85%;
+  }
+  :root {
+    --spacing-1-negative: -6px;
+    --spacing-2-negative: -12px;
+    --spacing-3-negative: -18px;
+    --spacing-1: 6px;
+    --spacing-2: 12px;
+    --spacing-3: 18px;
+    --spacing-4: 24px;
+    --spacing-5: 30px;
+    --spacing-6: 36px;
+    --spacing-7: 42px;
+    --spacing-8: 48px;
+    --spacing-9: 54px;
+    --spacing-10: 60px;
+    --spacing-11: 66px;
+    --spacing-12: 72px;
+    --spacing-13: 78px;
+    --spacing-14: 84px;
+  }
+}
+
 body {
   overflow-x: hidden;
 }

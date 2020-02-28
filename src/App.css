@@ -120,7 +120,7 @@ h3.paragraph {
 
 .animation-paper-plane .paper-plane {
   position: absolute;
-  top: 50%;
+  top: -20%;
   left: -200px;
 }
 

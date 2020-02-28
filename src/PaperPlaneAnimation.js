@@ -3,7 +3,6 @@ import { gsap, Power1, CSSPlugin, MotionPathPlugin } from "gsap/all";
 import paperPlane from "./paperPlane.png";
 import * as ScrollMagic from "scrollmagic";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
-import flyPathSVG from "./flyPath.svg";
 
 gsap.registerPlugin(Power1);
 gsap.registerPlugin(CSSPlugin);
@@ -23,21 +22,18 @@ class PaperPlaneAnimation extends PureComponent {
   };
 
   startAnimation = () => {
+    // const pathSmall = "M-16,107 C1,130 59,175 132,174 207,174 220,126 195,100 128,31 77,54 71,102 65,151 122,166 181,189 291,232 481,227 531,229";
+    const pathLarge =
+      "M-64,428 C4,520 236,700 528,696 828,696 880,504 780,400 512,124 308,216 284,408 260,604 488,664 724,756 1164,928 1924,908 2124‬,916";
     const tween = gsap.timeline();
     tween.to(".animation-paper-plane .paper-plane", 5, {
       ease: Power1.easeIn,
       motionPath: {
-        path: [
-          { x: -200, y: 20 },
-          { x: 500, y: 30 },
-          { x: 800, y: 10 },
-          { x: 1400, y: 40 }
-        ],
-        curviness: 4,
+        path: pathLarge,
+        curviness: 1.25,
         autoRotate: true
       }
     });
-    console.log(document.getElementById("#hgRWFimBx"));
     const controller = new ScrollMagic.Controller();
     new ScrollMagic.Scene({
       triggerElement: ".animation-paper-plane",
@@ -57,7 +53,6 @@ class PaperPlaneAnimation extends PureComponent {
           <div src={paperPlane} className="paper-plane">
             <img
               src={paperPlane}
-              className="lazyload"
               alt=""
               ref={node => {
                 this.animatedElement = node;

@@ -1,0 +1,179 @@
+:root {
+  --spacing-1-negative: -8px;
+  --spacing-2-negative: -16px;
+  --spacing-3-negative: -24px;
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-5: 40px;
+  --spacing-6: 48px;
+  --spacing-7: 56px;
+  --spacing-8: 64px;
+  --spacing-9: 72px;
+  --spacing-10: 80px;
+  --spacing-11: 88px;
+  --spacing-12: 96px;
+  --spacing-13: 104px;
+  --spacing-14: 112px;
+  --link: #f5576c;
+  --link-transition: color 200ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: "Montserrat";
+  font-size: 1em;
+  position: relative;
+  background-image: linear-gradient(to right, #ff6666 0%, #f5576c 100%);
+}
+/* background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  background-image: linear-gradient(to right, #a6c0fe 0%, #f68084 100%);
+  linear-gradient(to right, #ff6666 0%, #f5576c 100%);
+*/
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 4.6rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+h4,
+h5,
+h6,
+p.paragraph {
+  margin-bottom: var(--spacing-2);
+}
+
+h1,
+h2,
+h3.paragraph {
+  margin-bottom: var(--spacing-4);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.sm-mg-bottom {
+  margin-bottom: var(--spacing-2);
+}
+
+.md-mg-bottom {
+  margin-bottom: var(--spacing-4);
+}
+
+.lg-mg-bottom {
+  margin-bottom: var(--spacing-8);
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+
+.mt-1 {
+  margin-top: var(--spacing-1);
+}
+
+.mr-1 {
+  margin-right: var(--spacing-1);
+}
+
+.mb-1 {
+  margin-bottom: var(--spacing-1);
+}
+
+.ml-1 {
+  margin-left: var(--spacing-1);
+}
+
+.mt-2 {
+  margin-top: var(--spacing-2);
+}
+
+.mr-2 {
+  margin-right: var(--spacing-2);
+}
+
+.mb-2 {
+  margin-bottom: var(--spacing-2);
+}
+
+.ml-2 {
+  margin-left: var(--spacing-2);
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.container-1 {
+  display: flex;
+  margin: var(--spacing-1-negative);
+  flex-wrap: wrap;
+}
+
+.container-1 .item {
+  padding: var(--spacing-1);
+}

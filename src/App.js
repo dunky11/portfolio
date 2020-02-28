@@ -1,8 +1,8 @@
 import React, { Fragment, PureComponent } from "react";
-import "./App.css";
-import IntroSection from "./IntroSection";
-import PaperPlaneAnimation from "./PaperPlaneAnimation";
-import Content from "./Content";
+import "./css/app.css";
+import BlockAnimation from "./components/BlockAnimation";
+import PaperPlaneAnimation from "./components/PaperPlaneAnimation";
+import Content from "./components/Content";
 import "lazysizes";
 
 class App extends PureComponent {
@@ -20,7 +20,7 @@ class App extends PureComponent {
     return (
       <Fragment>
         <Content></Content>
-        <IntroSection></IntroSection>
+        <BlockAnimation></BlockAnimation>
         <PaperPlaneAnimation></PaperPlaneAnimation>
       </Fragment>
     );

@@ -1,0 +1,68 @@
+.intro-text {
+  position: absolute;
+  top: 25vh;
+  left: 0;
+  width: 100%;
+  padding-left: var(--spacing-3);
+  padding-right: calc(16px + var(--spacing-5));
+}
+
+.intro-text .intro-text-inner {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.intro-text-sub {
+  opacity: 0;
+  margin-left: 4px;
+}
+
+h1.hide-text {
+  overflow: hidden;
+  position: relative;
+  height: 5.2rem;
+}
+
+.hide-text span {
+  position: absolute;
+  top: 5.2rem;
+}
+
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+  padding-left: var(--spacing-3);
+  /* 16px is width of scollbar */
+  padding-right: calc(16px + var(--spacing-5));
+}
+
+.content-wrapper-inner {
+  margin-bottom: var(--spacing-14);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paper-margin {
+  margin-top: 105vh;
+}
+
+.paper {
+  padding: var(--spacing-3);
+  background-color: white;
+}
+
+.avaible-on-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--link-transition);
+}
+
+.avaible-on-link:hover {
+  color: white;
+}

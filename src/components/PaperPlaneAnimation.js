@@ -29,7 +29,7 @@ class PaperPlaneAnimation extends PureComponent {
     const controller = new ScrollMagic.Controller();
     new ScrollMagic.Scene({
       triggerElement: this.animationPaperPlane,
-      duration: 2200,
+      duration: 2000,
       // Trigger animation at the top of the script
       triggerHook: 0
     })

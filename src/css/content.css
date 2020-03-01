@@ -42,7 +42,7 @@ h1.hide-text {
 }
 
 .content-wrapper-inner {
-  margin-bottom: var(--spacing-14);
+  margin-bottom: var(--spacing-6);
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;

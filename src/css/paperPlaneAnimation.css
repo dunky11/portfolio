@@ -23,3 +23,9 @@
   height: 100px;
   width: auto;
 }
+
+@media (max-width: 600px) {
+  .animation-paper-plane-wrapper {
+    display: none !important;
+  }
+}

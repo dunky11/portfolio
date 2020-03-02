@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import "../css/project.css";
 import reactSaasTemplateIMG from "../media/reactsaastemplate.jpg";
+import centraliaCoinIMG from "../media/centralia-coin.jpg";
 
 const _projects = [
   {
@@ -15,9 +16,9 @@ const _projects = [
     name: "Centralia Coin",
     github: "https://github.com/dunky11/centralia-coin",
     homepage: "https://dunky11.github.io/centralia-coin",
-    img: reactSaasTemplateIMG,
+    img: centraliaCoinIMG,
     decription:
-      "Basic cryptocurrency I build to learn more about the subject and is completely usable in the browser. Uses a Bitcoin-like blockchain. The backend runs on an express server and mongoDB. The frontend is basic React."
+      "Basic cryptocurrency I build to learn more about the subject and which is completely usable in the browser. Uses a Bitcoin-like blockchain. The backend runs on an express server and mongoDB. The frontend is basic React."
   }
 ];
 

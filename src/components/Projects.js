@@ -10,7 +10,7 @@ const _projects = [
     homepage: "https://reactsaastemplate.com",
     img: reactSaasTemplateIMG,
     decription:
-      "Template for a react application which i created. Implements googles Material Design. Has a lot of components, like a landing page, a blog, areas to login/register an admin dashboard and image upload. Currently has around 80 stars on github."
+      "Template for a React application which I created. Implements googles Material Design. Has a lot of components, like a landing page, a blog, areas to login/register an admin dashboard and image upload. Currently has around 200 stars on github."
   },
   {
     name: "Centralia Coin",

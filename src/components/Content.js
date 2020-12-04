@@ -11,7 +11,7 @@ const socialLinks = [
     name: "Stack Overflow",
     link: "https://stackoverflow.com/users/7161804/tim-von-k%c3%a4nel"
   },
-  { name: "Mail", link: "mailto:tim.v.kaenel@web.de" }
+  { name: "Mail", link: "mailto:timv94@zedat.fu-berlin.de" }
 ];
 
 class Content extends PureComponent {

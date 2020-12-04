@@ -34,6 +34,7 @@ html {
   font-family: "Montserrat";
   position: relative;
   font-size: 100%;
+  overflow-x: hidden;
   background-image: linear-gradient(to right, #ff6666 0%, #f5576c 100%);
 }
 
@@ -89,7 +90,6 @@ html {
 
 body {
   overflow-x: hidden;
-  position: relative;
 }
 
 h1 {

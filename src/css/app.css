@@ -36,6 +36,7 @@ html {
   font-size: 100%;
   overflow-x: hidden;
   background-image: linear-gradient(to right, #ff6666 0%, #f5576c 100%);
+  overflow-y:hidden;
 }
 
 @media (max-width: 700px) {
@@ -91,6 +92,7 @@ html {
 body {
   overflow-x: hidden;
   position: relative;
+  overflow-y: hidden;
 }
 
 h1 {

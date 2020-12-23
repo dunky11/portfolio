@@ -40,6 +40,7 @@ class Content extends PureComponent {
     });
     tl.to(this.paperMargin, 1, { marginTop: "90vh" }, "-=0.5");
     tl.then(() => {
+      document.getElementsByTagName("html")[0].style.overflowY = "auto";
       document.body.style.overflowY = "auto";
       /**
        * Scrollbar on mobile is transparent, so we wont' append the padding
